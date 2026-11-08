@@ -1,0 +1,19 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 27
+    // MainActivity uses Apache HttpClient, which was removed from the SDK in API 23.
+    useLibrary 'org.apache.http.legacy'
+    defaultConfig {
+        applicationId "com.hmkcode.android"
+        minSdkVersion 16
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+}
